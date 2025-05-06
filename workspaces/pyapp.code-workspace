@@ -1,0 +1,13 @@
+{
+  "folders": [
+    {
+      "name": "Projects",
+      "path": "../projects/py"
+    },
+    {
+      "name": "App",
+      "path": "../app/pyapp"
+    }
+  ],
+  "settings": {}
+}
