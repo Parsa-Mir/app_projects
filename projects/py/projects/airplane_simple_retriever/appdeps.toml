@@ -1,0 +1,27 @@
+[project]
+name = "airplane_simple_retriever"
+version = "0.0.1"
+description = "a simple retriver"
+author = "parsa"
+
+[ml]
+type = "embeddings"
+provider = "litellm"
+
+[observability]
+type = "phoenix"
+host_type = "local"
+
+[vectordb]
+name = "airplane-simple-retriever"
+inRepoPath = "./data"
+branchName = "heh"
+sourceBranch = "main"
+commitHash = "f72def4b2ef0f5ba20c6e2c31537d832ab31ec5bd5a4cabc01c1ed5bc70cf66b"
+
+[project.dependencies]
+
+[ml.embeddings]
+model = "text-embedding-ada-002"
+timeout = 600
+caching = false

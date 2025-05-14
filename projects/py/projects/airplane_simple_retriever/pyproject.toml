@@ -5,8 +5,16 @@ description = "Add your description here"
 readme = "README.md"
 authors = [{ name = "parsa", email = "parsa.miraghaie@gmail.com" }]
 requires-python = ">=3.12"
-dependencies = ["pyapp"]
+dependencies = [
+    "duckdb>=1.2.2",
+    "lancedb>=0.22.0",
+    "langchain-openai>=0.3.16",
+    "pyapp[local-langchain]",
+]
 
+[project.scripts]
+generate = "airplane_simple_retriever.main:generate"
+inference = "airplane_simple_retriever.main:inference"
 
 [build-system]
 requires = ["hatchling"]
@@ -14,3 +22,6 @@ build-backend = "hatchling.build"
 
 [tool.uv.sources]
 pyapp = { path = "../../../../app/pyapp", editable = true }
+
+[dependency-groups]
+dev = ["ipykernel>=6.29.5"]
