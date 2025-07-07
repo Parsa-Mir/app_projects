@@ -1,0 +1,7 @@
+version: "3"
+
+tasks:
+  default:
+    desc: "Run the default task"
+    cmds: 
+      - echo "Running the default task"
